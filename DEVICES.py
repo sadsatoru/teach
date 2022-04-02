@@ -13,7 +13,7 @@ def __str__(self):
 class Mobile(DEVICES):
 
     def __init__(self, mark, breakdown_description, system):
-        super().__init__(mark, breakdown_description)
+        super().__init__(mark, breakdown_description, name="Телефон")
 
         self._system = system
 
@@ -23,7 +23,7 @@ class Mobile(DEVICES):
 
 class Laptop(DEVICES):
     def __init__(self, mark, breakdown_description, system, year_of_release):
-        super().__init__(mark, breakdown_description)
+        super().__init__(mark, breakdown_description, name="Ноут")
         self._system = system
         self._year_of_release = year_of_release
 
@@ -34,7 +34,7 @@ class Laptop(DEVICES):
 class TV(DEVICES):
 
     def __init__(self, mark, diagonal, breakdown_description):
-        super().__init__(mark, breakdown_description)
+        super().__init__(mark, breakdown_description, name="Телик")
         self._diagonal = diagonal
 
     def __str__(self):
